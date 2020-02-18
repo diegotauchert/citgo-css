@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro:900&display=swap');
+
+:root{
+  --fsize: 9rem;
+}
+*, *:before, *after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-image: linear-gradient(to right, #91a7bc, #6888a1);
+  font-family: 'Maven Pro', sans-serif;
+}
+.wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:column;
+}
+.sign{
+  background-color: #fff;
+  background-image:linear-gradient(#eee .03em, transparent .1em);
+  background-size: 100% 1.2em;
+  padding: .5rem 2rem;
+  border:2px solid #444;
+  border-radius: 10%;
+  box-shadow: 
+            12px 0 0 rgba(0,0,0,.4), 
+            -12px 0 0 rgba(0,0,0,.4),
+            5px 0 0 rgba(0,0,0,.5), 
+            -5px 0 0 rgba(0,0,0,.5);
+}
+.citgo{
+  filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.1));
+  margin-top: -40px;
+}
+.citgo:before{
+  content: '';
+}
+.citgo:after{
+  content: '';
+}
+.triangle{
+  height: 400px;
+  width: 450px;
+  background-color:#f47216;
+  clip-path: polygon(50% 10%, 100% 100%, 0% 100%);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.triangle:before{
+  content: '';
+  background-color:#b6242a;
+  position: absolute;
+  height: 360px;
+  width: 225px;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  border-left: 1px solid rgba(255,255,255,.5);
+}
+.triangle:after{
+  content: '';
+  background-color:#e41d25;
+  position: absolute;
+  height: 150px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  clip-path: polygon(50% 10%, 100% 100%, 0% 100%);
+  z-index: 3;
+  border: 1px solid rgba(255,255,255,.5);
+}
+span{
+  text-transform: uppercase;
+  color: #0f64a7;
+  display: block;
+  line-height: var(--fsize);
+  font-size: var(--fsize);
+  font-weight: bold;
+  text-align: center;
+}
+.crafted{
+  position: absolute;
+  bottom: 3%;
+  right: 3%;
+  color:#FFF;
+  font-size: 14px;
+}
+.crafted a{
+  color:#FFF;
+  text-decoration: none;
+  font-size: 18px;
+}
+.scaffold{
+  background-image: 
+                  repeating-linear-gradient(transparent, transparent 50px, rgba(0,0,0,.4) 50px, rgba(0,0,0,.4) 53px, transparent 53px, transparent 63px, rgba(0,0,0,.4) 63px, rgba(0,0,0,.4) 66px),
+                  repeating-linear-gradient(270deg, transparent, transparent 50px, rgba(0,0,0,.4) 50px, rgba(0,0,0,.4) 53px, transparent 53px, transparent 63px),
+                  repeating-linear-gradient(125deg, transparent, transparent 2px, rgba(0,0,0,.2) 2px, rgba(0,0,0,.2) 3px, transparent 3px, transparent 5px, rgba(0,0,0,.2) 5px);
+
+  height: 300px;
+  width: 400px;
+  margin: 0 auto;
+}
